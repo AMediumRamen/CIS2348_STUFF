@@ -1,3 +1,5 @@
+#Ahmed Rahman PSID:1820239
+#Lab 1.20
 user_num1 = int(input("Enter integer:\n"))
 print("You entered:",user_num1)
 print(user_num1,"squared is",user_num1*user_num1)

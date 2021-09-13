@@ -25,5 +25,5 @@ print("or:",int(age_in_years),"years")
 if current_day-birth_day == 0:
     if current_month-birth_month == 0:
         print("Happy Birthday")
-    else:
-        print("Goodbye")
+else:
+    print("Goodbye")

@@ -10,7 +10,7 @@ lemon_juicefloat = float(lemon_juice)
 water_float = float(water)
 agave_nectarfloat = float(agave_nectar)
 servings_madefloat = float(servings_made)
-print('\n')
+
 print(f'Lemonade ingredients - yields {servings_madefloat:.2f} servings')
 print(f'{lemon_juicefloat:.2f} cup(s) lemon juice')
 print(f'{water_float:.2f} cup(s) water')

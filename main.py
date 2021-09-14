@@ -7,7 +7,7 @@ print("Car wash -- $7")
 print("Car wax -- $12")
 print('')
 
-services = {'Oil change':35,'Tire rotation':19,'Car wash':7,'Car wax':12,'No service':'No service'}
+services = {'Oil change':35,'Tire rotation':19,'Car wash':7,'Car wax':12,'No service':None}
 first_service = input("Select first service:\n")
 second_service = input("Select second service:\n")
 print('')

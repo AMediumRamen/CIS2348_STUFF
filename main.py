@@ -5,6 +5,7 @@ print("Oil change -- $35")
 print("Tire rotation -- $19")
 print("Car wash -- $7")
 print("Car wax -- $12")
+print('')
 
 services = {'Oil change':35,'Tire rotation':19,'Car wash':7,'Car wax':12,'No service':0}
 first_service = input("Select first service:")

@@ -21,14 +21,13 @@ if first_service == "No service":
 else:
     print("Service 1: ", first_service, ", $", services[first_service], sep='')
     a = services[first_service]
-    exit()
 
 if second_service == "No service":
     print("Service 2: No service")
 else:
     print("Service 2: ", second_service, ", $", services[second_service], sep='')
     b =services[second_service]
-    exit()
+
 print('')
 total = a+b
 print('Total: $',total,sep='')

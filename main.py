@@ -8,9 +8,9 @@ print("Car wax -- $12")
 print('')
 
 services = {'Oil change':35,'Tire rotation':19,'Car wash':7,'Car wax':12,'No service':0}
-first_service = input("Select first service:")
-second_service = input("Select second service:")
-
+first_service = input("Select first service:\n")
+second_service = input("Select second service:\n")
+print('')
 print("Davy's auto shop invoice")
 print('')
 print("Service 1: ",first_service,", $",services[first_service],sep='')

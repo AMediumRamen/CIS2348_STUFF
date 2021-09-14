@@ -14,7 +14,7 @@ print('')
 print("Davy's auto shop invoice")
 print('')
 print("Service 1: ",first_service,", $",services[first_service],sep='')
-print("Service 1: ",second_service,", $",services[second_service],sep='')
+print("Service 2: ",second_service,", $",services[second_service],sep='')
 total = services[first_service]+services[second_service]
 print('')
 print('Total: $',total,sep='')

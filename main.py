@@ -7,15 +7,27 @@ print("Car wash -- $7")
 print("Car wax -- $12")
 print('')
 
-services = {'Oil change':35,'Tire rotation':19,'Car wash':7,'Car wax':12,'No service':None}
+services = {'Oil change':35,'Tire rotation':19,'Car wash':7,'Car wax':12}
 first_service = input("Select first service:\n")
 second_service = input("Select second service:\n")
 print('')
 print("Davy's auto shop invoice")
 print('')
-print("Service 1: ",first_service,", $",services[first_service],sep='')
-print("Service 2: ",second_service,", $",services[second_service],sep='')
-total = services[first_service]+services[second_service]
+if first_service == 'No service':
+    first_service = 0
+    a = 0
+    print('Service 1: No service')
+else:
+    print("Service 1: ", first_service, ", $", services[first_service], sep='')
+    a = services[first_service]
+if second_service == 'No service':
+    second_service = 0
+    b = 0
+    print("Service 2: No service")
+else:
+    print("Service 2: ", second_service, ", $", services[second_service], sep='')
+    b =  services[second_service]
 print('')
+total = a+b
 print('Total: $',total,sep='')
 

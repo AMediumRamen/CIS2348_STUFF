@@ -28,7 +28,7 @@ if second_service in services:
     print("Service 2: ", second_service, ", $", services[second_service], sep='')
     b =services[second_service]
 elif second_service not in services:
-    print("Service 2: No service")
+    print("Service 2: No Service")
 else:
     print("Error")
 

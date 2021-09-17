@@ -15,18 +15,22 @@ print("Davy's auto shop invoice")
 print('')
 a=0
 b=0
-if first_service == "No service":
-    print('Service 1: No service')
-
-else:
+if first_service in services:
     print("Service 1: ", first_service, ", $", services[first_service], sep='')
     a = services[first_service]
 
-if second_service == "No service":
-    print("Service 2: No service")
+elif first_service not in services:
+    print("Service 1: No Service")
 else:
+    print("Error")
+
+if second_service in services:
     print("Service 2: ", second_service, ", $", services[second_service], sep='')
     b =services[second_service]
+elif second_service not in services:
+    print("Service 2: No service")
+else:
+    print("Error")
 
 print('')
 total = a+b

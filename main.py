@@ -12,7 +12,7 @@ for x in range(-10, 11):
             print(x, y)
             yikes = 1
 if yikes != 1:
-    print('No Solution')
+    print('No solution')
 
 
 

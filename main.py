@@ -4,6 +4,7 @@ third = int(input())
 fourth = int(input())
 fifth = int(input())
 sixth = int(input())
+yikes = 0
 
 for x in range(-10, 11):
     for y in range(-10,11):

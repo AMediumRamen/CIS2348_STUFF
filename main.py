@@ -1,4 +1,4 @@
-name = 'main'
+
 def exact_change(user_total):
     num_dollars = user_total // 100
     user_total %= 100
@@ -11,8 +11,7 @@ def exact_change(user_total):
     num_pennies = user_total
     return (num_dollars, num_quarters, num_dimes, num_nickels, num_pennies)
 
-
-if name == 'main':
+if __name__ == '__main__':
     input_val = int(input())
     num_dollars, num_quarters, num_dimes, num_nickels, num_pennies = exact_change(input_val)
     if input_val <= 0:

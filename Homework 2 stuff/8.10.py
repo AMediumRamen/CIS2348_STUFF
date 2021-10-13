@@ -1,3 +1,5 @@
+# Ahmed Rahman PSID:1820239
+
 yikes = input()
 yikes2 = yikes.replace(' ','')
 if yikes2 == yikes2[::-1]:

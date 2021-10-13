@@ -9,3 +9,4 @@ number_of_iteration = len(wordlist)
 for i in range(number_of_iteration):
     print(wordlist[i], wordlist.count(wordlist[i]))
 finallist = set(wordlist)
+yikes.close()

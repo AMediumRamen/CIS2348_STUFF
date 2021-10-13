@@ -8,4 +8,4 @@ with open(csv_input, 'r') as yikes:
 number_of_iteration = len(wordlist)
 for i in range(number_of_iteration):
     print(wordlist[i], wordlist.count(wordlist[i]))
-finallist = list(dict.fromkeys(wordlist))
+finallist = set(wordlist)

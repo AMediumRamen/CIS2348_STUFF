@@ -1,9 +1,10 @@
 import csv
-inputfile = input()
-with open(inputfile, 'r') as yikes:
+csv_input = input()
+with open(csv_input, 'r') as yikes:
     yikers = csv.reader(yikes)
-    for anything in yikers:
-        word_list = list(anything)
-        for word in word_list:
-            word_count = anything.count(word)
-            print(word, word_count)
+    for word in yikers:
+        wordlist = word
+finallist = list(dict.fromkeys(wordlist))
+number_of_iteration = len(finallist)
+for i in range(number_of_iteration):
+    print(finallist[i], finallist.count(finallist[i]))

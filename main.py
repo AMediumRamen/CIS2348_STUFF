@@ -4,7 +4,8 @@ with open(csv_input, 'r') as yikes:
     yikers = csv.reader(yikes)
     for word in yikers:
         wordlist = word
-finallist = list(dict.fromkeys(wordlist))
-number_of_iteration = len(finallist)
+
+number_of_iteration = len(wordlist)
 for i in range(number_of_iteration):
-    print(finallist[i], finallist.count(finallist[i]))
+    print(wordlist[i], wordlist.count(wordlist[i]))
+finallist = list(dict.fromkeys(wordlist))

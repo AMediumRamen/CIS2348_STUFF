@@ -8,5 +8,5 @@ with open(csv_input, 'r') as yikes:
 number_of_iteration = len(wordlist)
 for i in range(number_of_iteration):
     print(wordlist[i], wordlist.count(wordlist[i]))
-finallist = set(wordlist)
+    finallist = set(wordlist)
 yikes.close()

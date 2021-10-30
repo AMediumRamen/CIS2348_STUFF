@@ -127,6 +127,7 @@ while i< len(sortedPastService):
     yikes5.write('\n')
     i +=1
 #past service date
+#damaged inventory
 sortedDamaged=[]
 for ids in damaged_ids:
     damagedList= list((ids,ManDict.get(ids),typeDict.get(ids),PriceDict.get(ids),str(ServiceDatesDict.get(ids))))
@@ -137,7 +138,7 @@ while i< len(sortedDamaged):
     yikes6.write(str(sortedDamaged[i]))
     yikes6.write('\n')
     i +=1
-#damaged inventory
+
 
 #damaged inventory
 

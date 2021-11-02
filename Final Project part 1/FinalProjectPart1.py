@@ -3,14 +3,14 @@ import csv
 import datetime
 
 
-yikes = open('FullInventory.csv','w')
-yikes2 = open('LaptopInventory.csv','w')
-yikes3 = open('PhoneInventory.csv','w')
-yikes4 = open('TowerInventory.csv','w')
-yikes5 = open('PastServiceDateInventory.csv','w')
-yikes6 = open('DamagedInventory.csv','w')
+yikes = open('FinalProjectFullInventory.csv','w')
+yikes2 = open('FinalProjectLaptopInventory.csv','w')
+yikes3 = open('FinalProjectPhoneInventory.csv','w')
+yikes4 = open('FinalProjectTowerInventory.csv','w')
+yikes5 = open('FinalProjectPastServiceDateInventory.csv','w')
+yikes6 = open('FinalProjectDamagedInventory.csv','w')
 
-with open('ManufacturerList.csv','r') as Man_csv:
+with open('FinalProjectManufacturerList.csv','r') as Man_csv:
     reader = csv.reader(Man_csv,delimiter=',')
     ManList=[]
     for row in reader:
@@ -18,44 +18,44 @@ with open('ManufacturerList.csv','r') as Man_csv:
 
 
 IDList = []
-for sublist in ManList:         #List of IDs Only
+for sublist in ManList:         #List of IDs Only that I can iterate through later
     IDList.append(sublist[0])
 ID = tuple(IDList)              #Had to change to a tuple to avoid errors
 
 
-ManDict={}                      #Dictionary of Manufacturers
+ManDict={}                      #Dictionary of Manufacturers will be used to get values while iterating through ID List
 for row in ManList:
     key = int(row[0])
     ManDict[key] = row[1]
 
 
 
-typeDict = {}   #Dictionary of types
+typeDict = {}   #Dictionary of types will be used to get values while iterating through ID List
 for row in ManList:
     key = int(row[0])
     typeDict[key] = row[2]
 
 
 
-PriceList = csv.reader(open('PriceList.csv'))    #Dictionary of Prices
+PriceList = csv.reader(open('FinalProjectPriceList.csv')) #Dictionary of Prices will be used to get values while iterating through ID List
 PriceDict = {}
 for row in PriceList:
     key = int(row[0])
     PriceDict[key]=int(row[1])
 
 
-ServiceDatesList = csv.reader(open('ServiceDatesList.csv'))   #Dictionary of Serice Dates
+ServiceDatesList = csv.reader(open('FinalProjectServiceDatesList.csv'))#Dictionary of Serice Dates will be used to get values while iterating through ID List
 ServiceDatesDict = {}
 for row in ServiceDatesList:
     key = int(row[0])
     ServiceDatesDict[key]=datetime.datetime.strptime(row[1],'%m/%d/%Y')
 
-DamagedDict={}
+DamagedDict={}# Dictionary of Damaged items will be used to get values while iterating through ID List
 for row in ManList:
     key = int(row[0])
     DamagedDict[key]=row[3]
 
-sortedArray = []
+sortedArray = []#Empty List to put x in (need it to sort later)
 for ids in ID:
     x = list((ids,ManDict.get(ids),typeDict.get(ids),PriceDict.get(ids),str(ServiceDatesDict.get(ids)),DamagedDict.get(ids)))
     sortedArray.append(x)

@@ -27,6 +27,6 @@ if __name__ == "__main__":
 
     first.print_info()
     print('Number of calories for {:.2f} serving(s): {:.2f}'.format(Foodservings,first.get_calories(Foodservings)))
-
+    print()
     second.print_info()
     print('Number of calories for {:.2f} serving(s): {:.2f}'.format(Foodservings, second.get_calories(Foodservings)))

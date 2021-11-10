@@ -2,13 +2,13 @@
 
 class Team:
     def __init__(self):
-        self.teamName = 'none'
-        self.teamWins = 0
-        self.teamLosses = 0
+        self.team_name = 'none'
+        self.team_wins = 0
+        self.team_losses = 0
 
     def get_win_percentage(self):
         try:
-            return (self.teamWins)/(self.teamWins+self.teamLosses)
+            return (self.team_wins)/(self.team_wins+self.team_losses)
         except ZeroDivisionError:
             return 0
 

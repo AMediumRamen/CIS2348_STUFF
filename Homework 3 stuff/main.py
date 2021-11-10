@@ -5,7 +5,7 @@ class ItemToPurchase:
         self.item_price = item_price
         self.item_quantity =item_quantity
     def print_item_cost(self):
-        yikes = ('{} {} @ {} = ${}'.format(self.item_name,self.item_quantity,self.item_price,(int(self.item_price*self.item_quantity))))
+        yikes = ('{} {} @ {} = ${}'.format(self.item_name,self.item_quantity,int(self.item_price),(int(self.item_price*self.item_quantity))))
         return yikes
 if __name__ == "__main__":
     print('Item 1')

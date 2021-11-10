@@ -6,7 +6,8 @@ class ItemToPurchase:
         self.item_quantity =item_quantity
     def print_item_cost(self):
         yikes = ('{} {} @ {} = ${}'.format(self.item_name,self.item_quantity,self.item_price,(int(self.item_price*self.item_quantity))))
-        return yikes
+        cost = int(self.item_price*self.item_quantity)
+        return yikes,cost
 if __name__ == "__main__":
     print('Item 1')
     Item1 = ItemToPurchase()
@@ -32,7 +33,7 @@ if __name__ == "__main__":
     print(Item1.print_item_cost())
     print(Item2.print_item_cost())
 
-    print('Total: $'.format((Item1.item_price*Item1.item_quantity)+(Item2.item_price*Item2.item_quantity)))
+    print('Total: $'.format((Item1.print_item_cost()[1])+(Item2.print_item_cost()[1])))
 
 
 

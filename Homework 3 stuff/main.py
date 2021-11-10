@@ -10,15 +10,29 @@ class ItemToPurchase:
 if __name__ == "__main__":
     print('Item 1')
     Item1 = ItemToPurchase()
-    name = input('Enter the item name:')
-    price = float(input('Enter the item price:'))
-    quantity = int(input('Enter the item quantity'))
+    name = input('Enter the item name:\n')
+    price = float(input('Enter the item price:\n'))
+    quantity = int(input('Enter the item quantity\n'))
 
     Item1.item_name = name
     Item1.item_price = price
     Item1.item_quantity = quantity
 
+    print('Item 2')
+    Item2 =ItemToPurchase()
+    name = input('Enter the item name:\n')
+    price = float(input('Enter the item price:\n'))
+    quantity = int(input('Enter the item quantity\n'))
+
+    Item2.item_name = name
+    Item2.item_price = price
+    Item2.item_quantity = quantity
+
+    print('TOTAL COST')
     print(Item1.print_item_cost())
+    print(Item2.print_item_cost())
+
+    print('Total: $'.format((Item1.item_price*Item1.item_quantity)+(Item2.item_price*Item2.item_quantity)))
 
 
 

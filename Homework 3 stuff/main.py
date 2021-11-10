@@ -5,14 +5,14 @@ class ItemToPurchase:
         self.item_price = item_price
         self.item_quantity =item_quantity
     def print_item_cost(self):
-        yikes = ('{} {} @ {} = ${}'.format(self.item_name,self.item_quantity,int(self.item_price),(int(self.item_price*self.item_quantity))))
+        yikes = ('{} {} @ ${} = ${}'.format(self.item_name,self.item_quantity,int(self.item_price),(int(self.item_price*self.item_quantity))))
         return yikes
 if __name__ == "__main__":
     print('Item 1')
     Item1 = ItemToPurchase()
     name = input('Enter the item name:\n')
     price = float(input('Enter the item price:\n'))
-    quantity = int(input('Enter the item quantity\n'))
+    quantity = int(input('Enter the item quantity:\n'))
 
     Item1.item_name = name
     Item1.item_price = price

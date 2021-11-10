@@ -18,7 +18,7 @@ if __name__ == "__main__":
     Item1.item_price = price
     Item1.item_quantity = quantity
     item1cost = price*quantity
-
+    print('')
     print('Item 2')
     Item2 =ItemToPurchase()
     name = input('Enter the item name:\n')

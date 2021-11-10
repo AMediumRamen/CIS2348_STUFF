@@ -10,7 +10,7 @@ class Team:
 
     def get_win_percentage(self):
         try:
-            return (self.team_wins)/(self.team_wins+self.team_losses)
+            return self.team_wins/(self.team_wins+self.team_losses)
         except ZeroDivisionError:
             return 0
 
@@ -21,12 +21,12 @@ if __name__ == "__main__":
     wins = int(input())
     loss = int(input())
 
-    yikes.teamName = name
-    yikes.teamWins = wins
-    yikes.teamLosses = loss
+    yikes.team_name = name
+    yikes.team_wins = wins
+    yikes.team_losses = loss
 
     if yikes.get_win_percentage()>=0.5:
-        print('Congratulations, Team {} has a winning average!'.format(name))
+        print('Congratulations, Team',name,'has a winning average!')
     else:
-        print('Team {} has a losing average.'.format(name))
+        print('Team',name,'has a losing average.')
 

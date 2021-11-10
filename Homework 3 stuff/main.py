@@ -6,7 +6,7 @@ class Team:
         self.teamWins = 0
         self.teamLosses = 0
 
-    def average(self):
+    def get_win_percentage(self):
         return self.teamWins/(self.teamWins+self.teamLosses)
 
 if __name__ == "__main__":
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     yikes.teamWins = wins
     yikes.teamLosses = loss
 
-    if yikes.average()>0.5:
+    if yikes.get_win_percentage()>0.5:
         print('Congratulations, Team',name,'has a winning average!')
     else:
-        print('Team',name,'has a losing average')
+        print('Team',name,'has a losing average.')

@@ -7,7 +7,11 @@ class Team:
         self.teamLosses = 0
 
     def get_win_percentage(self):
-        return self.teamWins/(self.teamWins+self.teamLosses)
+        try:
+            return self.teamWins/(self.teamWins+self.teamLosses)
+        except ZeroDivisionError:
+            return 0
+
 
 if __name__ == "__main__":
     yikes = Team()

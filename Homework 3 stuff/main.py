@@ -24,6 +24,6 @@ if __name__ == "__main__":
     yikes.teamLosses = loss
 
     if yikes.get_win_percentage()>=0.5:
-        print('Congratulations, Team {} has a winning average!',format(name))
+        print('Congratulations, Team {} has a winning average!'.format(name))
     else:
-        print('Team {} has a losing average.',format(name))
+        print('Team {} has a losing average.'.format(name))

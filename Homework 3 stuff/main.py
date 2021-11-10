@@ -23,13 +23,13 @@ if __name__ == "__main__":
     Item2 =ItemToPurchase()
     name = input('Enter the item name:\n')
     price = float(input('Enter the item price:\n'))
-    quantity = int(input('Enter the item quantity\n'))
+    quantity = int(input('Enter the item quantity:\n'))
 
     Item2.item_name = name
     Item2.item_price = price
     Item2.item_quantity = quantity
     item2cost = price*quantity
-
+    print('')
     print('TOTAL COST')
     print(Item1.print_item_cost())
     print(Item2.print_item_cost())

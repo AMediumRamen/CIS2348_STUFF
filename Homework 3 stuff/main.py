@@ -120,4 +120,27 @@ if __name__ == "__main__":
     print('Customer name: {}\n'.format(customer_name))
     print("Today's date: {}\n".format(current_date))
 
+    Cart = ShoppingCart(customer_name,current_date)
+
+
+    def print_menu(Cart):
+        customer = Cart
+        menu = ("\nMENU\n"
+                "a - Add item to cart\n"
+                "r - Remove item from cart\n"
+                "c - Change item quantity\n"
+                "i - Output items' descriptions\n"
+                "o - Output shopping cart\n"
+                "q - Quit\n")
+
+        userinput = ''
+        while (userinput != 'q'):
+            print(menu)
+            print('')
+
+
+
+
+
+
 

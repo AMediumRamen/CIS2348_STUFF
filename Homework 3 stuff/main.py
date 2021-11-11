@@ -3,7 +3,7 @@ listMaker = input()
 listToFilter = listMaker.split()
 yikersList=[]
 for i in listToFilter:
-    if int(i)>0:
+    if int(i)>= 0:
         yikersList.append(int(i))
 
 

@@ -154,6 +154,7 @@ if __name__ == "__main__":
         if userinput == 'o':
             customer.output_shopping_cart()
 
+    print(Cart)
 
 
 

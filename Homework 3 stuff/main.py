@@ -137,6 +137,13 @@ if __name__ == "__main__":
         while (userinput != 'q'):
             print(menu)
             print('')
+            userinput = input('Choose an option:\n')
+
+            while (userinput != 'a' or userinput != 'r' or userinput != 'c' or userinput !='i' or userinput != 'o' or userinput != 'q'):
+                userinput = input('Choose an option:\n')
+
+
+
 
 
 

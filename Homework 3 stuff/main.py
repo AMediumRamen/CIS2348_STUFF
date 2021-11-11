@@ -28,34 +28,53 @@ class ShoppingCart:
 
 
 
-def add_item(self,):
-    print('ADD ITEM TO CART\n')
-    item_name = str(input('Enter the item name:\n'))
-    item_description = str(input('Enter the item description:\n'))
-    item_price = int(input('Enter the item price:\n'))
-    item_quantity = int(input('Enter the item quantity:\n'))
-    self.cart_items.append(ItemToPurchase(item_name,item_description,item_price,item_quantity))
+    def add_item(self,):
+        print('ADD ITEM TO CART\n')
+        item_name = str(input('Enter the item name:\n'))
+        item_description = str(input('Enter the item description:\n'))
+        item_price = int(input('Enter the item price:\n'))
+        item_quantity = int(input('Enter the item quantity:\n'))
+        self.cart_items.append(ItemToPurchase(item_name,item_description,item_price,item_quantity))
 
 
 
 
-def remove_item(self):
-    print('REMOVE ITEM FROM CART\n')
-    itemToRemove = str(input('Enter name of item to remove:\n'))
-    for i in self.cart_items:
-        if itemToRemove == i:
-           del self.cart_items[i]
-        else:
-            print('Item not found in cart. Nothing removed.')
+    def remove_item(self):
+        print('REMOVE ITEM FROM CART\n')
+        itemToRemove = str(input('Enter name of item to remove:\n'))
+        for i in self.cart_items:
+            if itemToRemove in self.cart_items:
+                del self.cart_items[i]
+            else:
+                print('Item not found in cart. Nothing removed.')
 
 
-def modify_item(self):
-    print('CHANGE ITEM QUANTITY\n')
-    itemToModify = str(input('Enter the item name:\n'))
-    for i in self.cart_items:
-        if itemToModify == i:
-            newQuan = int(input('Enter the new quantity\n'))
-            i.item_quantity = quantity
+    def modify_item(self):
+        print('CHANGE ITEM QUANTITY\n')
+        itemToModify = str(input('Enter the item name:\n'))
+        breaker = True
+        for i in self.cart_items:
+            if i.item_name == itemToModify:
+                NewQuan = int(input('Enter the new quantity:\n'))
+                i.item_quantity = NewQuan
+                breaker = False
+        if breaker == True:
+            print('Item not found in cart. Nothing modified.\n')
+
+
+
+    def get_num_items_in_cart(self):
+        for i in self.cart_items:
+            return i.item_quantity
+
+    def get_cost_of_cart(self):
+        yikers = 0
+        for i in self.cart_items:
+            yikers += i.item_quantity * i.item_price
+        return yikers
+
+    def print_total(self):
+
 
 
 

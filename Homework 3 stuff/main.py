@@ -83,7 +83,7 @@ class ShoppingCart:
             print("{}'s Shopping Cart - {}\n".format(self.customer_name,self.current_date))
             print('Number of Items:',self.get_num_items_in_cart())
             for i in self.cart_items:
-                print()
+                print('{} {} @ ${} = ${}\n'.format(i.item_name,i.item_quantity,i.item_price,(i.item_quantity*i.item_price)))
 
 
 

@@ -143,6 +143,16 @@ if __name__ == "__main__":
                 userinput = input('Choose an option:\n')
 
 
+        if userinput == 'a':
+            customer.add_item()
+        if userinput == 'r':
+            customer.remove_item()
+        if userinput == 'c':
+            customer.modify_item()
+        if userinput == 'i':
+            customer.output_descriptions()
+        if userinput == 'o':
+            customer.output_shopping_cart()
 
 
 

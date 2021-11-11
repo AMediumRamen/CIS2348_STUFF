@@ -9,6 +9,6 @@ for i in stringList:
         stringDictionary[i] += 1
     else:
         stringDictionary[i] = 1
-
-for keys in stringDictionary:
-    print(keys,stringDictionary.get(keys))
+for word in stringList:
+    for keys in stringDictionary:
+        print(keys,stringDictionary.get(keys))

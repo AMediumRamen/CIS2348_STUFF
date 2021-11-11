@@ -64,8 +64,10 @@ class ShoppingCart:
 
 
     def get_num_items_in_cart(self):
+        totalItems = 0
         for i in self.cart_items:
-            return i.item_quantity
+            totalItems += i.item_quantity
+        return totalItems
 
     def get_cost_of_cart(self):
         yikers = 0
@@ -74,6 +76,14 @@ class ShoppingCart:
         return yikers
 
     def print_total(self):
+        total = self.get_cost_of_cart()
+        if (total == 0):
+            print('SHOPPING CART IS EMPTY\n')
+        else:
+            print("{}'s Shopping Cart - {}\n".format(self.customer_name,self.current_date))
+            print('Number of Items:',self.get_num_items_in_cart())
+            for i in self.cart_items:
+                print()
 
 
 

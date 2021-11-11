@@ -114,30 +114,10 @@ class ShoppingCart:
 
 
 if __name__ == "__main__":
-    print('Item 1')
-    Item1 = ItemToPurchase()
-    name = input('Enter the item name:\n')
-    price = float(input('Enter the item price:\n'))
-    quantity = int(input('Enter the item quantity:\n'))
+    customer_name = str(input("Enter customer's name:\n"))
+    current_date = str(input("Enter today's date:\n"))
+    print('')
+    print('Customer name: {}\n'.format(customer_name))
+    print("Today's date: {}\n".format(current_date))
 
-    Item1.item_name = name
-    Item1.item_price = price
-    Item1.item_quantity = quantity
-    item1cost = price*quantity
-    print('')
-    print('Item 2')
-    Item2 =ItemToPurchase()
-    name = input('Enter the item name:\n')
-    price = float(input('Enter the item price:\n'))
-    quantity = int(input('Enter the item quantity:\n'))
 
-    Item2.item_name = name
-    Item2.item_price = price
-    Item2.item_quantity = quantity
-    item2cost = price*quantity
-    print('')
-    print('TOTAL COST')
-    print(Item1.print_item_cost())
-    print(Item2.print_item_cost())
-    print('')
-    print('Total: ${}'.format(int(item1cost+item2cost)))

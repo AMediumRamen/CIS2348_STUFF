@@ -136,7 +136,7 @@ class ShoppingCart:
 
 
             if userinput == 'a':
-                self.add_item(ItemToPurchase)
+                self.add_item(Cart)
             if userinput == 'r':
                 self.remove_item()
             if userinput == 'c':

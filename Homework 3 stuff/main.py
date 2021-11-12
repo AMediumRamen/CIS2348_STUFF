@@ -28,7 +28,7 @@ class ShoppingCart:
 
 
 
-    def add_item(self):
+    def add_item(self,):
         print('ADD ITEM TO CART')
         item_name = str(input('Enter the item name:\n'))
         item_description = str(input('Enter the item description:\n'))

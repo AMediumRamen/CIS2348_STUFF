@@ -89,11 +89,11 @@ class ShoppingCart:
 
 
     def print_descriptions(self):
-        print("{}'s Shopping Cart - {}\n".format(self.customer_name, self.current_date))
+        print("{}'s Shopping Cart - {}".format(self.customer_name, self.current_date))
         print('')
         print('Item Descriptions')
         for i in self.cart_items:
-            print('{}:{}'.format(i.item_name,i.item_description))
+            print('{}: {}'.format(i.item_name,i.item_description))
 
     def output_shopping_cart(self):
         total = self.get_cost_of_cart()

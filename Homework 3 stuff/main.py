@@ -15,12 +15,12 @@ for jersey,rating in sortedRoster:
 
 userinput = ''
 while userinput != 'q':
-    print("a - Add player"
-          "d - Remove player"
-          "u - Update player rating"
-          "r - Output players above a rating"
-          "o - Output roster"
-          "q - Quit")
+    print("a - Add player\n"
+          "d - Remove player\n"
+          "u - Update player rating\n"
+          "r - Output players above a rating\n"
+          "o - Output roster\n"
+          "q - Quit\n")
     userinput = input('Choose an option\n')
     while (userinput != 'a' and userinput != 'd' and userinput != 'u' and userinput != 'r' and userinput != 'o' and userinput != 'q'):
         userinput = input('Choose an option:\n')

@@ -3,8 +3,8 @@
 Roster = {}
 i = 0
 while i != 5:
-    playerJersey = int(input("Enter player {}'s jersey number:".format(str(i+1))))
-    playerRating = int(input("Enter player {}'s rating:".format(str(i+1))))
+    playerJersey = int(input("Enter player {}'s jersey number:\n".format(str(i+1))))
+    playerRating = int(input("Enter player {}'s rating:\n".format(str(i+1))))
     Roster[playerJersey]=playerRating
     i += 1
 sortedRoster = sorted(Roster.items())

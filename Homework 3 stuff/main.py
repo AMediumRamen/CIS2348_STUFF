@@ -28,7 +28,7 @@ class ShoppingCart:
 
 
 
-    def add_item(self,):
+    def add_item(self):
         print('ADD ITEM TO CART\n')
         item_name = str(input('Enter the item name:\n'))
         item_description = str(input('Enter the item description:\n'))
@@ -112,6 +112,35 @@ class ShoppingCart:
             print("OUTPUT ITEMS' DESCRIPTIONS\n")
             self.print_descriptions()
 
+    def print_menu(self):
+
+        userinput = ''
+        while (userinput != 'q'):
+            print("\nMENU\n"
+                    "a - Add item to cart\n"
+                    "r - Remove item from cart\n"
+                    "c - Change item quantity\n"
+                    "i - Output items' descriptions\n"
+                    "o - Output shopping cart\n"
+                    "q - Quit\n")
+            userinput = input('Choose an option:\n')
+
+            while (userinput != 'a' or userinput != 'r' or userinput != 'c' or userinput !='i' or userinput != 'o' or userinput != 'q'):
+                userinput = input('Choose an option:\n')
+
+
+            if userinput == 'a':
+                self.add_item()
+            if userinput == 'r':
+                self.remove_item()
+            if userinput == 'c':
+                self.modify_item()
+            if userinput == 'i':
+                self.output_descriptions()
+            if userinput == 'o':
+                self.output_shopping_cart()
+
+
 
 if __name__ == "__main__":
     customer_name = str(input("Enter customer's name:\n"))
@@ -122,39 +151,7 @@ if __name__ == "__main__":
 
     Cart = ShoppingCart(customer_name,current_date)
 
-
-    def print_menu(Cart):
-        customer = Cart
-        menu = ("\nMENU\n"
-                "a - Add item to cart\n"
-                "r - Remove item from cart\n"
-                "c - Change item quantity\n"
-                "i - Output items' descriptions\n"
-                "o - Output shopping cart\n"
-                "q - Quit\n")
-
-        userinput = ''
-        while (userinput != 'q'):
-            print(menu)
-            print('')
-            userinput = input('Choose an option:\n')
-
-            while (userinput != 'a' or userinput != 'r' or userinput != 'c' or userinput !='i' or userinput != 'o' or userinput != 'q'):
-                userinput = input('Choose an option:\n')
-
-
-        if userinput == 'a':
-            customer.add_item()
-        if userinput == 'r':
-            customer.remove_item()
-        if userinput == 'c':
-            customer.modify_item()
-        if userinput == 'i':
-            customer.output_descriptions()
-        if userinput == 'o':
-            customer.output_shopping_cart()
-
-    print(Cart)
+    Cart.print_menu()
 
 
 

@@ -103,6 +103,7 @@ class ShoppingCart:
         else:
             print('OUTPUT SHOPPING CART\n')
             self.print_total()
+        print(total)
 
     def output_descriptions(self):
         total = self.get_cost_of_cart()

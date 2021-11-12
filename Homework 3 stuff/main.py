@@ -98,6 +98,9 @@ class ShoppingCart:
     def output_shopping_cart(self):
         total = self.get_cost_of_cart()
         if (total == 0):
+            print("{}'s Shopping Cart - {}".format(self.customer_name, self.current_date))
+            print('Number of Items:', self.get_num_items_in_cart())
+            print()
             print('SHOPPING CART IS EMPTY\n')
             print('Total: ${}'.format(total))
 

@@ -16,7 +16,8 @@ for jersey,rating in sortedRoster:
 
 userinput = ''
 while userinput != 'q':
-    print("a - Add player\n"
+    print("\nMENU\n"
+          "a - Add player\n"
           "d - Remove player\n"
           "u - Update player rating\n"
           "r - Output players above a rating\n"

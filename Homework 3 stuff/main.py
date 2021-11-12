@@ -28,10 +28,10 @@ class ShoppingCart:
 
 
 
-    def add_item(self,):
+    def add_item(self,ItemToPurchase):
         print('ADD ITEM TO CART')
-        item_name = str(input('Enter the item name:\n'))
-        item_description = str(input('Enter the item description:\n'))
+        item_name = input('Enter the item name:\n')
+        item_description = input('Enter the item description:\n')
         item_price = int(input('Enter the item price:\n'))
         item_quantity = int(input('Enter the item quantity:\n'))
         self.cart_items.append(ItemToPurchase(item_name,item_description,item_price,item_quantity))
@@ -41,7 +41,7 @@ class ShoppingCart:
 
     def remove_item(self):
         print('REMOVE ITEM FROM CART')
-        itemToRemove = str(input('Enter name of item to remove:\n'))
+        itemToRemove = input('Enter name of item to remove:\n')
         if itemToRemove in self.cart_items:
             self.cart_items.remove(itemToRemove)
         else:
@@ -50,7 +50,7 @@ class ShoppingCart:
 
     def modify_item(self):
         print('CHANGE ITEM QUANTITY\n')
-        itemToModify = str(input('Enter the item name:\n'))
+        itemToModify = input('Enter the item name:\n')
         breaker = True
         for i in self.cart_items:
             if i.item_name == itemToModify:
@@ -136,7 +136,7 @@ class ShoppingCart:
 
 
             if userinput == 'a':
-                self.add_item()
+                self.add_item(ItemToPurchase)
             if userinput == 'r':
                 self.remove_item()
             if userinput == 'c':

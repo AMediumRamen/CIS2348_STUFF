@@ -146,8 +146,8 @@ if __name__ == "__main__":
     customer_name = str(input("Enter customer's name:\n"))
     current_date = str(input("Enter today's date:\n"))
     print('')
-    print('Customer name: {}\n'.format(customer_name))
-    print("Today's date: {}\n".format(current_date))
+    print('Customer name: {}'.format(customer_name))
+    print("Today's date: {}".format(current_date))
 
     Cart = ShoppingCart(customer_name,current_date)
 

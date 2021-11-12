@@ -51,7 +51,9 @@ while userinput != 'q':
         playerRating = int(input('Enter a rating:\n'))
 
         for jersey,rating in sorted(Roster.items()):
+            print('ABOVE {}'.format(playerRating))
             if rating > playerRating:
+
                 print('Jersey number: {}, Rating: {}'.format(jersey,rating))
 
 

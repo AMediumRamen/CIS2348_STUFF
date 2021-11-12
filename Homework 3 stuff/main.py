@@ -50,7 +50,7 @@ while userinput != 'q':
     if userinput == 'r':
         playerRating = int(input('Enter a rating:\n'))
 
-        for jersey,rating in Roster.items():
+        for jersey,rating in sorted(Roster.items()):
             if rating > playerRating:
                 print('Jersey number: {}, Rating: {}'.format(jersey,rating))
 

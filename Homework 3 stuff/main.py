@@ -29,7 +29,7 @@ class ShoppingCart:
 
 
     def add_item(self):
-        print('ADD ITEM TO CART\n')
+        print('ADD ITEM TO CART')
         item_name = str(input('Enter the item name:\n'))
         item_description = str(input('Enter the item description:\n'))
         item_price = int(input('Enter the item price:\n'))
@@ -80,13 +80,13 @@ class ShoppingCart:
         if (total == 0):
             print('SHOPPING CART IS EMPTY\n')
         else:
-            print("{}'s Shopping Cart - {}\n".format(self.customer_name,self.current_date))
+            print("{}'s Shopping Cart - {}".format(self.customer_name,self.current_date))
             print('Number of Items:',self.get_num_items_in_cart())
             print()
             for i in self.cart_items:
-                print('{} {} @ ${} = ${}\n'.format(i.item_name,i.item_quantity,i.item_price,(i.item_quantity*i.item_price)))
+                print('{} {} @ ${} = ${}'.format(i.item_name,i.item_quantity,i.item_price,(i.item_quantity*i.item_price)))
             print('')
-            print('Total:{}\n'.format(total))
+            print('Total: ${}'.format(total))
 
 
     def print_descriptions(self):
@@ -101,16 +101,16 @@ class ShoppingCart:
         if (total == 0):
             print('SHOPPING CART IS EMPTY\n')
         else:
-            print('OUTPUT SHOPPING CART\n')
+            print('OUTPUT SHOPPING CART')
             self.print_total()
-        print(total)
+
 
     def output_descriptions(self):
         total = self.get_cost_of_cart()
         if (total == 0):
             print('SHOPPING CART IS EMPTY\n')
         else:
-            print("OUTPUT ITEMS' DESCRIPTIONS\n")
+            print("OUTPUT ITEMS' DESCRIPTIONS")
             self.print_descriptions()
 
     def print_menu(self):

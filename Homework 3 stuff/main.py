@@ -43,7 +43,7 @@ class ShoppingCart:
         print('REMOVE ITEM FROM CART')
         itemToRemove = str(input('Enter name of item to remove:\n'))
         for i in self.cart_items:
-            if itemToRemove in self.cart_items:
+            if i.itemToRemove in self.cart_items:
                 del self.cart_items[i]
             else:
                 print('Item not found in cart. Nothing removed.')

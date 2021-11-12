@@ -125,7 +125,7 @@ class ShoppingCart:
                     "q - Quit\n")
             userinput = input('Choose an option:\n')
 
-            while (userinput != 'a' or userinput != 'r' or userinput != 'c' or userinput !='i' or userinput != 'o' or userinput != 'q'):
+            while (userinput != 'a' and userinput != 'r' and userinput != 'c' and userinput !='i' and userinput != 'o' and userinput != 'q'):
                 userinput = input('Choose an option:\n')
 
 

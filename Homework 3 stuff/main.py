@@ -28,7 +28,7 @@ class ShoppingCart:
 
 
 
-    def add_item(self,ItemToPurchase):
+    def add_item(self,):
         print('ADD ITEM TO CART')
         item_name = input('Enter the item name:\n')
         item_description = input('Enter the item description:\n')
@@ -136,7 +136,7 @@ class ShoppingCart:
 
 
             if userinput == 'a':
-                self.add_item(Cart)
+                self.add_item()
             if userinput == 'r':
                 self.remove_item()
             if userinput == 'c':

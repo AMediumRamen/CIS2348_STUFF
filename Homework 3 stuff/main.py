@@ -23,7 +23,7 @@ while userinput != 'q':
           "r - Output players above a rating\n"
           "o - Output roster\n"
           "q - Quit\n")
-    userinput = input('Choose an option\n')
+    userinput = input('Choose an option:\n')
     while (userinput != 'a' and userinput != 'd' and userinput != 'u' and userinput != 'r' and userinput != 'o' and userinput != 'q'):
         userinput = input('Choose an option:\n')
 

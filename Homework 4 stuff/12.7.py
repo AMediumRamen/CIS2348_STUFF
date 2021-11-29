@@ -1,3 +1,4 @@
+#Ahmed Rahman PSID:1820239
 def fat_burning_heart_rate(age):
     HR = (220- age)*0.7
     return HR

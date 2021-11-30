@@ -7,7 +7,7 @@ while name != '-1':
         age = int(parts[1]) + 1
         print('{} {}'.format(name, age))
     except ValueError as yikes:
-        print(0)
+        print(name, 0)
 
     parts = input().split()
     name = parts[0]

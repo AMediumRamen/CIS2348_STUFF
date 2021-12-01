@@ -7,9 +7,7 @@ def selection_sort_descend_trace(numbers):
         for b in range(a+1, totalN):
             if numbers[b] > numbers[num_big]:
                 num_big = b
-                temp = numbers[a]
-                numbers[a] = numbers[num_big]
-                numbers[num_big]=temp
+        numbers[a],numbers[num_big]=numbers[num_big],numbers[a]
         print(' '.join([str(x)for x in numbers]))
 
     return numbers

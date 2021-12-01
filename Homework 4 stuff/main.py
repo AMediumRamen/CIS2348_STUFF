@@ -2,15 +2,16 @@
 
 list_to_sort = list[int(input())]
 def selection_sort_descend_trace(numbers):
-    iter1 = 0
-    iter2 = iter1+1
-    while iter1 != len(numbers):
-        num_big = numbers[iter1]
-        if numbers[iter2] > num_big:
-            num_big = numbers[iter2]
-            iter1 +=1
-        numbers[iter1],numbers[num_big] = numbers[num_big],numbers[iter1]
-    print(numbers)
+    for a in range(len(numbers)-1):
+        num_big = a
+        for b in range(a+1 and len(numbers)):
+            if numbers[b] > numbers[num_big]:
+                num_big = b
+        numbers[a],numbers[num_big] = numbers[num_big],numbers[a]
+        for anything in numbers:
+            print(numbers[anything])
+
+
 
 
 

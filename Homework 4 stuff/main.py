@@ -10,7 +10,7 @@ def selection_sort_descend_trace(numbers):
         for x in range(len(numbers)):
             print(numbers[x])
 
-
+    return numbers
 
 
 

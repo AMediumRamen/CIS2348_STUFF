@@ -1,6 +1,5 @@
 #Ahmed Rahman PSID:1820239
 
-list_to_sort = list[int(input())]
 def selection_sort_descend_trace(numbers):
     for a in range(len(numbers)-1):
         num_big = a
@@ -18,5 +17,6 @@ def selection_sort_descend_trace(numbers):
 
 
 if __name__ == "__main__":
-    list_to_sort = list[int(input())]
-    selection_sort_descend_trace(list_to_sort)
+    num = input().split()
+    numbers = [int(x) for x in num]
+    selection_sort_descend_trace(numbers)

@@ -18,4 +18,5 @@ def selection_sort_descend_trace(numbers):
 
 
 if __name__ == "__main__":
-    numbers = []
+    list_to_sort = list[int(input())]
+    selection_sort_descend_trace(list_to_sort)

@@ -10,9 +10,10 @@ def partition(user_ids, i, k):
         while user_ids[k] > piv:#decrement through the right side while > varible piv
             k -= 1
         if i >= k: #determines if the swap is necessary based on if number at user_ids[i] is greater than user_ids[k]
-            return k
-        #actual swap
-        user_ids[i],user_ids[k] = user_ids[k],user_ids[i]
+            break
+        else:#actual swap
+            user_ids[i],user_ids[k] = user_ids[k],user_ids[i]
+    return k
 
 
 

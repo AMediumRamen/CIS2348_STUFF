@@ -28,8 +28,8 @@ def quicksort(user_ids,i,k):
     if i >= k: #checking if sorted before calling partition function
         return
     part = partition(user_ids,i,k)
-    quicksort(user_ids,i,part)#sort from i=0 to part(the pivot)-1
-    quicksort(user_ids,part+1,k)#sort from part(pivot)+1 to k(last index)
+    quicksort(user_ids,i,part)#sort from i=0 to the pivot
+    quicksort(user_ids,part+1,k)#sort from part(pivot)+1 to k(last index)/len-1
     return
 
 if __name__ == "__main__":

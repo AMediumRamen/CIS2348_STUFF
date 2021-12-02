@@ -13,18 +13,21 @@ def partition(user_ids, i, k):
             break
         else:#actual swap
             user_ids[i],user_ids[k] = user_ids[k],user_ids[i]
+            i += 1
+            k -= 1
     return k
 
 
 
 def quicksort(user_ids,i,k):
     global num_calls #call num_calls global variable
-    if i < k: #checking for actual entries to sort
-        part = partition(user_ids,i,k)
-        quicksort(user_ids,i,part-1)#sort from i=0 to part(the pivot)-1
-        quicksort(user_ids,part+1,k)#sort from part(pivot)+1 to k(last index)
-    num_calls += 1#increments the global variable after each call of quicksort function
-
+    num_calls += 1  # increments the global variable after each call of quicksort function
+    if i >= k: #checking if sorted before calling partition function
+        return
+    part = partition(user_ids,i,k)
+    quicksort(user_ids,i,part)#sort from i=0 to part(the pivot)-1
+    quicksort(user_ids,part+1,k)#sort from part(pivot)+1 to k(last index)
+    return
 
 if __name__ == "__main__":
     user_ids = []

@@ -25,7 +25,7 @@ def quicksort(user_ids,i,k):
     if i >= k: #checking if sorted before calling partition function
         return
     part = partition(user_ids,i,k)#calling partition function to determine the last value in the left partition
-    quicksort(user_ids,i,part)#sort from i=0 to part(the pivot)-1
+    quicksort(user_ids,i,part-1)#sort from i=0 to part(the pivot)-1
     quicksort(user_ids,part+1,k)#sort from part(pivot)+1 to k(last index)
     return
 

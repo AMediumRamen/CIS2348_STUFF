@@ -4,11 +4,11 @@
 parts = input().split()
 name = parts[0]
 while name != '-1':
-    try:#implementation of try block as per FIXME instructions
+    try:#implementation of try block as per FIX-ME instructions
         age = int(parts[1]) + 1
         print('{} {}'.format(name, age))
-    except ValueError as yikes:
-        print(name, 0)
+    except ValueError as yikes:#Implementation of except block as per FIX-ME instructions
+        print('{} {}'.format(name, 0))
 
     parts = input().split()
     name = parts[0]

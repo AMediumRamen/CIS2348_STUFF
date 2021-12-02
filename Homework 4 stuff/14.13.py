@@ -13,8 +13,8 @@ def partition(user_ids, i, k):
             break
         else:#actual swap
             user_ids[i],user_ids[k] = user_ids[k],user_ids[i]
-            i += 1 #update left increment
-            k -= 1 #update right increment
+            i += 1 #update left iteration
+            k -= 1 #update right iteration
     return k
 
 

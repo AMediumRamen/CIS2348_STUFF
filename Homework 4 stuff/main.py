@@ -1,24 +1,28 @@
 #Ahmed Rahman PSID:1820239
+
+# CODE SKELETON WAS PROVIDED BY ZYBOOKS IN LAB 14.12
 num_calls = 0
-
 def partition(user_ids, i, k):
-    mid = i
-    for a in range(i+1,k+1):
-        if str(user_ids[i]) <= str(i):
-            mid += 1
-            user_ids[a], user_ids[mid] = user_ids[mid], user_ids[a]
-    user_ids[mid],user_ids[i] = user_ids[i], user_ids[mid]
-    return mid
+    piv = user_ids[(i+k)//2] #assigning PIV as the middle index
+    while True:
+        while user_ids[i]<piv:#increment through the left side while < variable piv
+            i += 1
+        while user_ids[k] > piv:#decrement through the right side while > varible piv
+            k -= 1
+        if i >= k: #determines if the swap is necessary based on if number at user_ids[i] is greater than user_ids[k]
+            return k
+        #actual swap
+        user_ids[i],user_ids[k] = user_ids[k],user_ids[i]
 
 
 
-def quicksort(user_ids, i, k):
-    global num_calls
-    if i < k:
-        mid = partition(user_ids,i,k)
-        quicksort(user_ids,i,mid-1)
-        quicksort(user_ids,mid+1,k)
-    num_calls += 1
+def quicksort(user_ids,i,k):
+    global num_calls #call num_calls global variable
+    if i < k: #checking for actual entries to sort
+        part = partition(user_ids,i,k)
+        quicksort(user_ids,i,part-1)#sort from i=0 to part(the pivot)-1
+        quicksort(user_ids,part+1,k)#sort from part(pivot)+1 to k(last index)
+    num_calls += 1#increments the global variable after each call of quicksort function
 
 
 if __name__ == "__main__":

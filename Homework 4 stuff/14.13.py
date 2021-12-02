@@ -1,6 +1,9 @@
 #Ahmed Rahman PSID:1820239
 
 # CODE SKELETON WAS PROVIDED BY ZYBOOKS IN LAB 14.12
+#Ahmed Rahman PSID:1820239
+
+# CODE SKELETON WAS PROVIDED BY ZYBOOKS IN LAB 14.12
 num_calls = 0
 def partition(user_ids, i, k):
     piv = user_ids[(i+k)//2] #assigning PIV as the middle index
@@ -9,12 +12,12 @@ def partition(user_ids, i, k):
             i += 1
         while user_ids[k] > piv:#decrement through the right side while > varible piv
             k -= 1
-        if i <= k: #determines if the swap is necessary based on if number at user_ids[i] is greater than user_ids[k]
+        if i >= k: #determines if the swap is necessary based on if number at user_ids[i] is greater than user_ids[k]
             break
         else:#actual swap
             user_ids[i],user_ids[k] = user_ids[k],user_ids[i]
-            i += 1 #update left iteration
-            k -= 1 #update right iteration
+            i += 1
+            k -= 1
     return k
 
 
@@ -24,8 +27,8 @@ def quicksort(user_ids,i,k):
     num_calls += 1  # increments the global variable after each call of quicksort function
     if i >= k: #checking if sorted before calling partition function
         return
-    part = partition(user_ids,i,k)#calling partition function to determine the last value in the left partition
-    quicksort(user_ids,i,part-1)#sort from i=0 to part(the pivot)-1
+    part = partition(user_ids,i,k)
+    quicksort(user_ids,i,part)#sort from i=0 to part(the pivot)-1
     quicksort(user_ids,part+1,k)#sort from part(pivot)+1 to k(last index)
     return
 

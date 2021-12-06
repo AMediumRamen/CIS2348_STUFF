@@ -54,17 +54,28 @@ ManufacturerList.sort(key=lambda a:a[4],reverse=True)
 OnlyManufacturer = [item[1]for item in ManufacturerList]
 OnlyTypes = [item[2]for item in ManufacturerList]
 
-answer = []
 yikes1 = ''
-    yikes2 = ''
-    foundMan = False
-    foundType = False
-    for c in userinput:
-        if c in OnlyManufacturer:
-            yikes1 += c
-            foundMan = True
+yikes2 = ''
+indexofyikes1 = ''
+indexofyikes2 =''
+userinput=input('Enter brand and type of item:').split()
+for c in userinput:
+    if c in OnlyManufacturer:
+        yikes1 += c
+        indexofyikes1 = OnlyManufacturer.index(c)
 
-    for c in userinput:
-        if c in OnlyTypes:
-            yikes2 += c
-            foundType = True
+for c in userinput:
+    if c in OnlyTypes:
+        yikes2 += c
+        indexofyikes2 = OnlyTypes.index(c)
+yikers = ''
+if yikes1 == '' or yikes2 =='':
+    print("No such item in inventory ")
+elif indexofyikes1 != indexofyikes2:
+    print("bruh")
+
+else:
+    for item in ManufacturerList:
+        if item[2]== yikes2 and item[1]==yikes1:
+            yikers = ManufacturerList.index(item)
+    print(ManufacturerList[yikers])

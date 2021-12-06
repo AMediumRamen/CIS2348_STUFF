@@ -48,7 +48,7 @@ ServiceDatesList = csv.reader(open('FinalProjectServiceDatesList.csv'))#Dictiona
 ServiceDatesDict = {}
 for row in ServiceDatesList:
     key = int(row[0])
-    ServiceDatesDict[key]=datetime.datetime.strptime(row[1],'%m/%d/%Y')
+    ServiceDatesDict[key]=datetime.strptime(row[1],'%m/%d/%Y')
 
 DamagedDict={}# Dictionary of Damaged items will be used to get values while iterating through ID List
 for row in ManList:

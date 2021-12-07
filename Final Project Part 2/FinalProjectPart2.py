@@ -1,8 +1,5 @@
 #Ahmed Rahman PSID# 1820239
-#Used Dictionaries for part 1. For part 2 trying to take a different approach
-#hopefully a class
-#one function to return value based on input
-#one function to return similar item of different brand based on input
+
 import csv
 from datetime import datetime
 
@@ -49,33 +46,49 @@ for i in ManufacturerList:
         ManufacturerList.remove(i)
 
 ManufacturerList.sort(key=lambda a:a[4],reverse=True)
-
+ListToPrint = ManufacturerList
+for i in ListToPrint:
+    del i[3]
+    del i[4]
 
 OnlyManufacturer = [item[1]for item in ManufacturerList]
 OnlyTypes = [item[2]for item in ManufacturerList]
 
-yikes1 = ''
-yikes2 = ''
-indexofyikes1 = ''
-indexofyikes2 =''
-userinput=input('Enter brand and type of item:').split()
-for c in userinput:
-    if c in OnlyManufacturer:
-        yikes1 += c
-        indexofyikes1 = OnlyManufacturer.index(c)
+inpt=input('Enter brand and type of item:')
+while inpt != "q":
+    userinput = inpt.split()
+    yikes1 = ''
+    yikes2 = ''
+    indexofyikes1 = ''
+    indexofyikes2 = ''
+    donefornow = False
+    for c in userinput:
+        if c in OnlyManufacturer:
+            yikes1 += c
+            indexofyikes1 = OnlyManufacturer.index(c)
 
-for c in userinput:
-    if c in OnlyTypes:
-        yikes2 += c
-        indexofyikes2 = OnlyTypes.index(c)
-yikers = ''
-if yikes1 == '' or yikes2 =='':
-    print("No such item in inventory ")
-elif indexofyikes1 != indexofyikes2:
-    print("bruh")
+    for c in userinput:
+        if c in OnlyTypes:
+            yikes2 += c
+            indexofyikes2 = OnlyTypes.index(c)
+    yikers = 0
+    yikers2= 0
+    if yikes1 == '' or yikes2 =='':
+        print("No such item in inventory")
 
-else:
-    for item in ManufacturerList:
-        if item[2]== yikes2 and item[1]==yikes1:
-            yikers = ManufacturerList.index(item)
-    print(ManufacturerList[yikers])
+    else:
+        for item in ManufacturerList:
+            if item[2]== yikes2 and item[1]==yikes1:
+                yikers = ManufacturerList.index(item)
+                donefornow = True
+
+        for item in ManufacturerList:
+            if item[2]== yikes2 and item[1] != yikes1:
+                yikers2 = ManufacturerList.index(item)
+
+        if donefornow == True:
+            print("Your item is:",ListToPrint[int(yikers)])
+            print("You may, also, consider:",ListToPrint[int(yikers2)])
+        else:
+            print("No such item in inventory")
+    inpt = input('Enter brand and type of item:')

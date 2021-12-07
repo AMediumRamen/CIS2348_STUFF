@@ -4,7 +4,7 @@ import csv
 from datetime import datetime
 
 
-with open('FinalProjectPart2ManufacturerList.csv','r') as ManufacturerCSV:
+with open('FinalProjectManufacturerList.csv','r') as ManufacturerCSV:
     reader = csv.reader(ManufacturerCSV,delimiter=',')
     ManufacturerList=[]
     for row in reader:
@@ -12,7 +12,7 @@ with open('FinalProjectPart2ManufacturerList.csv','r') as ManufacturerCSV:
 ManufacturerList.sort(key=lambda a:a[0])
 
 
-with open('FinalProjectPart2PriceList.csv') as PriceListCSV:
+with open('FinalProjectPriceList.csv') as PriceListCSV:
     reader = csv.reader(PriceListCSV,delimiter=',')
     PriceList = []
     for row in reader:
@@ -21,7 +21,7 @@ PriceList.sort(key=lambda a:a[0])
 PricesOnly = [item[1]for item in PriceList]
 
 
-with open('FinalProjectPart2ServiceDatesList.csv') as ServiceListCSV:
+with open('FinalProjectServiceDatesList.csv') as ServiceListCSV:
     reader = csv.reader(ServiceListCSV,delimiter=',')
     ServiceList = []
     for row in reader:
